@@ -23,3 +23,16 @@ MySQLターミナルに入る
 ```
 mysql -uroot -p -h localhost
 ```
+
+
+※ローカルよりMySQLへアクセスする場合は一度コンテナへ入り
+
+```
+hostname -i
+```
+でIPを確認後
+
+```
+mysql -uroot -h {確認したIP} -p
+```
+でログインする
