@@ -36,3 +36,16 @@ hostname -i
 mysql -uroot -h {確認したIP} -p
 ```
 でログインする
+
+Laravelより接続する際には
+
+```
+SELECT user, host, plugin FROM mysql.user;
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'mysql';
+```
+# my.cnfを修正(追加)
+vim /etc/mysql/my.cnf
+
+```
+default-authentication-plugin = mysql_native_password
+```
