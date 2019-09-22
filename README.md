@@ -43,8 +43,8 @@ Laravelより接続する際には
 SELECT user, host, plugin FROM mysql.user;
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'mysql';
 ```
-# my.cnfを修正(追加)
 vim /etc/mysql/my.cnf
+※下記を追加する
 
 ```
 default-authentication-plugin = mysql_native_password
